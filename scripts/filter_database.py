@@ -48,16 +48,25 @@ NOUN_BLACKLIST = {
     "vintage",    # angielski loanword
     "lucerna",    # głównie miasto szwajcarskie
     "recept",     # gen.lm. od "recepta" błędnie skategoryzowany jako rzeczownik męski
-    "dakota",     # nazwa stanu USA / tkaniny — myli się z pospolitym
     "pepsi",      # marka
     "millennium", # loanword łaciński
     "musli",      # loanword
     "tera",       # prefiks jednostki / gwara (nie rzeczownik)
     "starka",     # archaizm / gwara, mylące
+    "workshop",   # angielski loanword
+    "padło",      # forma czasownika "paść", nie rzeczownik
+    "drugie",     # zaimek/liczebnik, nie rzeczownik
+    "luter",      # imię własne (Marcin Luter)
+    # nazwy stanów USA
+    "dakota", "arizona", "wirginia", "delaware", "teksas", "kolorado",
 }
 
 DOP_BLACKLIST = {
-    "joga",      # mianownik "joga" (yoga) wchodzi jako dopełniacz przez błąd w PoliMorfie
+    "joga",      # mianownik wchodzi jako dopełniacz przez błąd w PoliMorfie
+    "zorza",     # mianownik zamiast dopełniacza (powinno być: zorzy)
+    "bona",      # imię własne / łacina, nie pospolity dopełniacz
+    "delaware",  # nazwa stanu USA
+    "kolorado",  # nazwa stanu USA
 }
 
 # Zaimki i determinanty które PoliMorf taguje jako przymiotniki
