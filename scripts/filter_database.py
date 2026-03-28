@@ -62,6 +62,8 @@ NOUN_BLACKLIST = {
     "ringo",      # imię własne / gra dziecięca
     "kapo",       # loanword (włoski/obozowy)
     "wiec",       # polityczny/archaiczny, brzmi dziwnie
+    "memorandum", # loanword łaciński
+    "football",   # angielski loanword
     # nazwy stanów USA
     "dakota", "arizona", "wirginia", "delaware", "teksas", "kolorado",
 }
@@ -77,6 +79,10 @@ DOP_BLACKLIST = {
     "ringo",     # imię własne / gra dziecięca
     "kapo",      # loanword
     "wiecu",     # dopełniacz od "wiec"
+    "metrowej",  # forma przymiotnikowa błędnie jako dopełniacz
+    "brzydula",  # mianownik zamiast dopełniacza (powinno być: brzyduli)
+    "memorandum", # loanword łaciński
+    "aids",      # zostaje jako rzeczownik, ale nie jako dopełniacz
 }
 
 # Zaimki i determinanty które PoliMorf taguje jako przymiotniki
@@ -102,6 +108,9 @@ ADJ_BLACKLIST = {
     "inny", "inna", "inne",
     "drugi", "druga", "drugie",
     "pewien", "pewna", "pewne",
+    # archaiczne / techniczne przymiotniki które brzmią źle
+    "kontent", "kontenta", "kontente",
+    "metrowy", "metrowa", "metrowe",
 }
 
 
