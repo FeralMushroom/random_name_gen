@@ -26,8 +26,8 @@ MAX_ADJ_LEN  = 18
 MAX_NOUN_LEN = 15
 MAX_DOP_LEN  = 18
 
-MIN_FREQ_ADJ  = 1e-7
-MIN_FREQ_NOUN = 1e-7
+MIN_FREQ_ADJ  = 2e-7
+MIN_FREQ_NOUN = 5e-7
 # Formy fleksyjne mają niższe freq niż lematy — próg celowo niski
 MIN_FREQ_DOP  = 1e-7
 
@@ -118,6 +118,11 @@ def main():
     print("Filtruje rzeczowniki...")
     with open(os.path.join(BACKUP_DIR, "noun_lemmas.json"), encoding="utf-8") as fh:
         nouns = json.load(fh)
+
+    # Zbiór wszystkich form przymiotnikowych — rzeczowniki które są w tym zbiorze
+    # to substantywizowane przymiotniki (np. "puste", "chore") — wywalamy je
+    adj_forms_set = {form for triplet in adj_ok for form in triplet}
+
     nouns_ok = {}
     total_in = total_out = 0
     for gender, words in nouns.items():
@@ -125,6 +130,8 @@ def main():
         for w in words:
             total_in += 1
             if "-" in w or len(w) > MAX_NOUN_LEN or freq(w) < MIN_FREQ_NOUN:
+                continue
+            if w in adj_forms_set:  # substantywizowany przymiotnik
                 continue
             kept.append(w)
             total_out += 1
