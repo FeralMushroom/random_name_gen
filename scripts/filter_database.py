@@ -57,6 +57,11 @@ NOUN_BLACKLIST = {
     "padło",      # forma czasownika "paść", nie rzeczownik
     "drugie",     # zaimek/liczebnik, nie rzeczownik
     "luter",      # imię własne (Marcin Luter)
+    "yang",       # filozofia wschodnia / imię własne, nie pasuje jako rzeczownik
+    "należący",   # imiesłów przymiotnikowy, nie rzeczownik
+    "ringo",      # imię własne / gra dziecięca
+    "kapo",       # loanword (włoski/obozowy)
+    "wiec",       # polityczny/archaiczny, brzmi dziwnie
     # nazwy stanów USA
     "dakota", "arizona", "wirginia", "delaware", "teksas", "kolorado",
 }
@@ -67,6 +72,11 @@ DOP_BLACKLIST = {
     "bona",      # imię własne / łacina, nie pospolity dopełniacz
     "delaware",  # nazwa stanu USA
     "kolorado",  # nazwa stanu USA
+    "toni",      # imię własne
+    "yang",      # filozofia wschodnia / imię własne
+    "ringo",     # imię własne / gra dziecięca
+    "kapo",      # loanword
+    "wiecu",     # dopełniacz od "wiec"
 }
 
 # Zaimki i determinanty które PoliMorf taguje jako przymiotniki
