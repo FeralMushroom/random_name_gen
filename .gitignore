@@ -1,0 +1,9 @@
+PoliMorf.tab.gz
+*.env
+data/backup/
+data/bot_state.json
+__pycache__/
+*.pyc
+*.pyw.bak
+.venv/
+venv/

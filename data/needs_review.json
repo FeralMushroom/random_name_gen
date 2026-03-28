@@ -1,0 +1,897 @@
+{
+  "adj": [
+    {
+      "forms": [
+        "bambusowaty",
+        "bambusowata",
+        "bambusowate"
+      ],
+      "root": "bambus"
+    },
+    {
+      "forms": [
+        "bambusowy",
+        "bambusowa",
+        "bambusowe"
+      ],
+      "root": "bambus"
+    },
+    {
+      "forms": [
+        "chujowy",
+        "chujowa",
+        "chujowe"
+      ],
+      "root": "chuj"
+    },
+    {
+      "forms": [
+        "czarnuchowaty",
+        "czarnuchowata",
+        "czarnuchowate"
+      ],
+      "root": "czarnuch"
+    },
+    {
+      "forms": [
+        "debilny",
+        "debilna",
+        "debilne"
+      ],
+      "root": "debil"
+    },
+    {
+      "forms": [
+        "debilowaty",
+        "debilowata",
+        "debilowate"
+      ],
+      "root": "debil"
+    },
+    {
+      "forms": [
+        "gówniany",
+        "gówniana",
+        "gówniane"
+      ],
+      "root": "gówn"
+    },
+    {
+      "forms": [
+        "gówniarski",
+        "gówniarska",
+        "gówniarskie"
+      ],
+      "root": "gówn"
+    },
+    {
+      "forms": [
+        "kretyniasty",
+        "kretyniasta",
+        "kretyniaste"
+      ],
+      "root": "kretyn"
+    },
+    {
+      "forms": [
+        "kretyniczny",
+        "kretyniczna",
+        "kretyniczne"
+      ],
+      "root": "kretyn"
+    },
+    {
+      "forms": [
+        "kretynowaty",
+        "kretynowata",
+        "kretynowate"
+      ],
+      "root": "kretyn"
+    },
+    {
+      "forms": [
+        "kurwi",
+        "kurwia",
+        "kurwie"
+      ],
+      "root": "kurw"
+    },
+    {
+      "forms": [
+        "niebambusowaty",
+        "niebambusowata",
+        "niebambusowate"
+      ],
+      "root": "bambus"
+    },
+    {
+      "forms": [
+        "niebambusowy",
+        "niebambusowa",
+        "niebambusowe"
+      ],
+      "root": "bambus"
+    },
+    {
+      "forms": [
+        "niechujowy",
+        "niechujowa",
+        "niechujowe"
+      ],
+      "root": "chuj"
+    },
+    {
+      "forms": [
+        "nieczarnuchowaty",
+        "nieczarnuchowata",
+        "nieczarnuchowate"
+      ],
+      "root": "czarnuch"
+    },
+    {
+      "forms": [
+        "niedebilny",
+        "niedebilna",
+        "niedebilne"
+      ],
+      "root": "debil"
+    },
+    {
+      "forms": [
+        "niedebilowaty",
+        "niedebilowata",
+        "niedebilowate"
+      ],
+      "root": "debil"
+    },
+    {
+      "forms": [
+        "niegówniany",
+        "niegówniana",
+        "niegówniane"
+      ],
+      "root": "gówn"
+    },
+    {
+      "forms": [
+        "niegówniarski",
+        "niegówniarska",
+        "niegówniarskie"
+      ],
+      "root": "gówn"
+    },
+    {
+      "forms": [
+        "niekretyniasty",
+        "niekretyniasta",
+        "niekretyniaste"
+      ],
+      "root": "kretyn"
+    },
+    {
+      "forms": [
+        "niekretyniczny",
+        "niekretyniczna",
+        "niekretyniczne"
+      ],
+      "root": "kretyn"
+    },
+    {
+      "forms": [
+        "niekretynowaty",
+        "niekretynowata",
+        "niekretynowate"
+      ],
+      "root": "kretyn"
+    },
+    {
+      "forms": [
+        "niekurwi",
+        "niekurwia",
+        "niekurwie"
+      ],
+      "root": "kurw"
+    },
+    {
+      "forms": [
+        "nieochujały",
+        "nieochujała",
+        "nieochujałe"
+      ],
+      "root": "chuj"
+    },
+    {
+      "forms": [
+        "niepedalski",
+        "niepedalska",
+        "niepedalskie"
+      ],
+      "root": "pedalsk"
+    },
+    {
+      "forms": [
+        "niepedałowy",
+        "niepedałowa",
+        "niepedałowe"
+      ],
+      "root": "pedałow"
+    },
+    {
+      "forms": [
+        "niepopierdolony",
+        "niepopierdolona",
+        "niepopierdolone"
+      ],
+      "root": "pierdol"
+    },
+    {
+      "forms": [
+        "niepopierdzielony",
+        "niepopierdzielona",
+        "niepopierdzielone"
+      ],
+      "root": "pierdz"
+    },
+    {
+      "forms": [
+        "nieskretyniały",
+        "nieskretyniała",
+        "nieskretyniałe"
+      ],
+      "root": "kretyn"
+    },
+    {
+      "forms": [
+        "nieskurwysyński",
+        "nieskurwysyńska",
+        "nieskurwysyńskie"
+      ],
+      "root": "kurw"
+    },
+    {
+      "forms": [
+        "niesłodkopierdzący",
+        "niesłodkopierdząca",
+        "niesłodkopierdzące"
+      ],
+      "root": "pierdz"
+    },
+    {
+      "forms": [
+        "niezajebisty",
+        "niezajebista",
+        "niezajebiste"
+      ],
+      "root": "jebi"
+    },
+    {
+      "forms": [
+        "ochujały",
+        "ochujała",
+        "ochujałe"
+      ],
+      "root": "chuj"
+    },
+    {
+      "forms": [
+        "pedalski",
+        "pedalska",
+        "pedalskie"
+      ],
+      "root": "pedalsk"
+    },
+    {
+      "forms": [
+        "pedałowy",
+        "pedałowa",
+        "pedałowe"
+      ],
+      "root": "pedałow"
+    },
+    {
+      "forms": [
+        "popierdzielony",
+        "popierdzielona",
+        "popierdzielone"
+      ],
+      "root": "pierdz"
+    },
+    {
+      "forms": [
+        "skretyniały",
+        "skretyniała",
+        "skretyniałe"
+      ],
+      "root": "kretyn"
+    },
+    {
+      "forms": [
+        "skurwysyński",
+        "skurwysyńska",
+        "skurwysyńskie"
+      ],
+      "root": "kurw"
+    },
+    {
+      "forms": [
+        "słodkopierdzący",
+        "słodkopierdząca",
+        "słodkopierdzące"
+      ],
+      "root": "pierdz"
+    },
+    {
+      "forms": [
+        "zajebisty",
+        "zajebista",
+        "zajebiste"
+      ],
+      "root": "jebi"
+    }
+  ],
+  "noun": [
+    {
+      "word": "gówniarstwo",
+      "gender": "n",
+      "root": "gówn"
+    },
+    {
+      "word": "gówno",
+      "gender": "n",
+      "root": "gówn"
+    },
+    {
+      "word": "kurwiszcze",
+      "gender": "n",
+      "root": "kurw"
+    },
+    {
+      "word": "kurwiątko",
+      "gender": "n",
+      "root": "kurw"
+    },
+    {
+      "word": "skurwysyństwo",
+      "gender": "n",
+      "root": "kurw"
+    },
+    {
+      "word": "żydostwo",
+      "gender": "n",
+      "root": "żydostw"
+    },
+    {
+      "word": "Chujten",
+      "gender": "m",
+      "root": "chuj"
+    },
+    {
+      "word": "azydek",
+      "gender": "m",
+      "root": "zydek"
+    },
+    {
+      "word": "bambus",
+      "gender": "m",
+      "root": "bambus"
+    },
+    {
+      "word": "chuj",
+      "gender": "m",
+      "root": "chuj"
+    },
+    {
+      "word": "chujek",
+      "gender": "m",
+      "root": "chuj"
+    },
+    {
+      "word": "czarnuch",
+      "gender": "m",
+      "root": "czarnuch"
+    },
+    {
+      "word": "debil",
+      "gender": "m",
+      "root": "debil"
+    },
+    {
+      "word": "debilizm",
+      "gender": "m",
+      "root": "debil"
+    },
+    {
+      "word": "dupek",
+      "gender": "m",
+      "root": "dupek"
+    },
+    {
+      "word": "gówniarz",
+      "gender": "m",
+      "root": "gówn"
+    },
+    {
+      "word": "gównozjad",
+      "gender": "m",
+      "root": "gówn"
+    },
+    {
+      "word": "jebak",
+      "gender": "m",
+      "root": "jeba"
+    },
+    {
+      "word": "kretyn",
+      "gender": "m",
+      "root": "kretyn"
+    },
+    {
+      "word": "kretynizm",
+      "gender": "m",
+      "root": "kretyn"
+    },
+    {
+      "word": "kurwiarz",
+      "gender": "m",
+      "root": "kurw"
+    },
+    {
+      "word": "kurwik",
+      "gender": "m",
+      "root": "kurw"
+    },
+    {
+      "word": "kurwimetr",
+      "gender": "m",
+      "root": "kurw"
+    },
+    {
+      "word": "kurwiszon",
+      "gender": "m",
+      "root": "kurw"
+    },
+    {
+      "word": "kutafon",
+      "gender": "m",
+      "root": "kutaf"
+    },
+    {
+      "word": "opierdol",
+      "gender": "m",
+      "root": "pierdol"
+    },
+    {
+      "word": "ostrojebiec",
+      "gender": "m",
+      "root": "jebi"
+    },
+    {
+      "word": "pedałowicz",
+      "gender": "m",
+      "root": "pedałow"
+    },
+    {
+      "word": "pedałowiec",
+      "gender": "m",
+      "root": "pedałow"
+    },
+    {
+      "word": "pierdolec",
+      "gender": "m",
+      "root": "pierdol"
+    },
+    {
+      "word": "pierdolnik",
+      "gender": "m",
+      "root": "pierdol"
+    },
+    {
+      "word": "pierdziel",
+      "gender": "m",
+      "root": "pierdz"
+    },
+    {
+      "word": "pojebaniec",
+      "gender": "m",
+      "root": "jeba"
+    },
+    {
+      "word": "pseudodebilizm",
+      "gender": "m",
+      "root": "debil"
+    },
+    {
+      "word": "półdupek",
+      "gender": "m",
+      "root": "dupek"
+    },
+    {
+      "word": "skurwiel",
+      "gender": "m",
+      "root": "kurw"
+    },
+    {
+      "word": "skurwysyn",
+      "gender": "m",
+      "root": "kurw"
+    },
+    {
+      "word": "srajda",
+      "gender": "m",
+      "root": "sraj"
+    },
+    {
+      "word": "zapierdol",
+      "gender": "m",
+      "root": "pierdol"
+    },
+    {
+      "word": "Żydek",
+      "gender": "m",
+      "root": "żydek"
+    },
+    {
+      "word": "żydek",
+      "gender": "m",
+      "root": "żydek"
+    },
+    {
+      "word": "bambusowość",
+      "gender": "f",
+      "root": "bambus"
+    },
+    {
+      "word": "chujnia",
+      "gender": "f",
+      "root": "chuj"
+    },
+    {
+      "word": "chujowość",
+      "gender": "f",
+      "root": "chuj"
+    },
+    {
+      "word": "cipka",
+      "gender": "f",
+      "root": "cipk"
+    },
+    {
+      "word": "czarnucha",
+      "gender": "f",
+      "root": "czarnuch"
+    },
+    {
+      "word": "czarnuchowatość",
+      "gender": "f",
+      "root": "czarnuch"
+    },
+    {
+      "word": "debilka",
+      "gender": "f",
+      "root": "debil"
+    },
+    {
+      "word": "debilność",
+      "gender": "f",
+      "root": "debil"
+    },
+    {
+      "word": "debilowatość",
+      "gender": "f",
+      "root": "debil"
+    },
+    {
+      "word": "dekretynizacja",
+      "gender": "f",
+      "root": "kretyn"
+    },
+    {
+      "word": "dupcia",
+      "gender": "f",
+      "root": "dupci"
+    },
+    {
+      "word": "gnida",
+      "gender": "f",
+      "root": "gnida"
+    },
+    {
+      "word": "gównianość",
+      "gender": "f",
+      "root": "gówn"
+    },
+    {
+      "word": "gówniara",
+      "gender": "f",
+      "root": "gówn"
+    },
+    {
+      "word": "gówniarskość",
+      "gender": "f",
+      "root": "gówn"
+    },
+    {
+      "word": "gówniarzeria",
+      "gender": "f",
+      "root": "gówn"
+    },
+    {
+      "word": "kretyniastość",
+      "gender": "f",
+      "root": "kretyn"
+    },
+    {
+      "word": "kretyniczność",
+      "gender": "f",
+      "root": "kretyn"
+    },
+    {
+      "word": "kretynka",
+      "gender": "f",
+      "root": "kretyn"
+    },
+    {
+      "word": "kretynowatość",
+      "gender": "f",
+      "root": "kretyn"
+    },
+    {
+      "word": "kurwa",
+      "gender": "f",
+      "root": "kurw"
+    },
+    {
+      "word": "kurwiarnia",
+      "gender": "f",
+      "root": "kurw"
+    },
+    {
+      "word": "kurwica",
+      "gender": "f",
+      "root": "kurw"
+    },
+    {
+      "word": "kurwiość",
+      "gender": "f",
+      "root": "kurw"
+    },
+    {
+      "word": "niebambusowość",
+      "gender": "f",
+      "root": "bambus"
+    },
+    {
+      "word": "niechujowość",
+      "gender": "f",
+      "root": "chuj"
+    },
+    {
+      "word": "nieczarnuchowatość",
+      "gender": "f",
+      "root": "czarnuch"
+    },
+    {
+      "word": "niedebilność",
+      "gender": "f",
+      "root": "debil"
+    },
+    {
+      "word": "niedebilowatość",
+      "gender": "f",
+      "root": "debil"
+    },
+    {
+      "word": "niegównianość",
+      "gender": "f",
+      "root": "gówn"
+    },
+    {
+      "word": "niegówniarskość",
+      "gender": "f",
+      "root": "gówn"
+    },
+    {
+      "word": "niekretyniastość",
+      "gender": "f",
+      "root": "kretyn"
+    },
+    {
+      "word": "niekretyniczność",
+      "gender": "f",
+      "root": "kretyn"
+    },
+    {
+      "word": "niekretynowatość",
+      "gender": "f",
+      "root": "kretyn"
+    },
+    {
+      "word": "niekurwiość",
+      "gender": "f",
+      "root": "kurw"
+    },
+    {
+      "word": "niepedalskość",
+      "gender": "f",
+      "root": "pedalsk"
+    },
+    {
+      "word": "niepedałowość",
+      "gender": "f",
+      "root": "pedałow"
+    },
+    {
+      "word": "nieskurwysyńskość",
+      "gender": "f",
+      "root": "kurw"
+    },
+    {
+      "word": "niezajebistość",
+      "gender": "f",
+      "root": "jebi"
+    },
+    {
+      "word": "ocipka",
+      "gender": "f",
+      "root": "cipk"
+    },
+    {
+      "word": "pedalskość",
+      "gender": "f",
+      "root": "pedalsk"
+    },
+    {
+      "word": "pedałowość",
+      "gender": "f",
+      "root": "pedałow"
+    },
+    {
+      "word": "pizda",
+      "gender": "f",
+      "root": "pizd"
+    },
+    {
+      "word": "podśmiechujka",
+      "gender": "f",
+      "root": "chuj"
+    },
+    {
+      "word": "sekretyna",
+      "gender": "f",
+      "root": "kretyn"
+    },
+    {
+      "word": "skurwysyńskość",
+      "gender": "f",
+      "root": "kurw"
+    },
+    {
+      "word": "srajda",
+      "gender": "f",
+      "root": "sraj"
+    },
+    {
+      "word": "zajebistość",
+      "gender": "f",
+      "root": "jebi"
+    }
+  ],
+  "dop": [
+    {
+      "word": "Bambusa",
+      "root": "bambus"
+    },
+    {
+      "word": "Chuja",
+      "root": "chuj"
+    },
+    {
+      "word": "Chujozy",
+      "root": "chuj"
+    },
+    {
+      "word": "Cipki",
+      "root": "cipk"
+    },
+    {
+      "word": "Czarnucha",
+      "root": "czarnuch"
+    },
+    {
+      "word": "Debila",
+      "root": "debil"
+    },
+    {
+      "word": "Debilów",
+      "root": "debil"
+    },
+    {
+      "word": "Gówna",
+      "root": "gówn"
+    },
+    {
+      "word": "Gówniarzy",
+      "root": "gówn"
+    },
+    {
+      "word": "Jebania",
+      "root": "jeba"
+    },
+    {
+      "word": "Kurwy",
+      "root": "kurw"
+    },
+    {
+      "word": "Kurwicy",
+      "root": "kurw"
+    },
+    {
+      "word": "Pierdolenia",
+      "root": "pierdol"
+    },
+    {
+      "word": "Pierdolnika",
+      "root": "pierdol"
+    },
+    {
+      "word": "Pizdy",
+      "root": "pizd"
+    },
+    {
+      "word": "Rozpierdolu",
+      "root": "pierdol"
+    },
+    {
+      "word": "Rozpierdolenia",
+      "root": "pierdol"
+    },
+    {
+      "word": "Spierdolenia",
+      "root": "pierdol"
+    },
+    {
+      "word": "Ujebania",
+      "root": "jeba"
+    },
+    {
+      "word": "Wkurwienia",
+      "root": "kurw"
+    },
+    {
+      "word": "Wkurwiania",
+      "root": "kurw"
+    },
+    {
+      "word": "Wpierdolu",
+      "root": "pierdol"
+    },
+    {
+      "word": "Wychujania",
+      "root": "chuj"
+    },
+    {
+      "word": "Wyjebania",
+      "root": "jeba"
+    },
+    {
+      "word": "Wypierdolenia",
+      "root": "pierdol"
+    },
+    {
+      "word": "Zajebania",
+      "root": "jeba"
+    },
+    {
+      "word": "Zajebistości",
+      "root": "jebi"
+    },
+    {
+      "word": "Zapierdolu",
+      "root": "pierdol"
+    },
+    {
+      "word": "Żydostwa",
+      "root": "żydostw"
+    }
+  ]
+}
