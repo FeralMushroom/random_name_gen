@@ -36,7 +36,7 @@ ORDINAL_BLACKLIST = {
     "pierwszy", "trzeci", "czwarty", "piąty", "szósty",
     "siódmy", "ósmy", "dziewiąty", "dziesiąty", "zerowy",
 }
-RE_ORDINAL    = re.compile(r"(nasty|dziesty|setny|tysięczny|milionowy)$")
+RE_ORDINAL    = re.compile(r"(nasty|dziesty|dziesiąty|setny|tysięczny|milionowy)$")
 RE_PARTICIPLE = re.compile(r"ący$")  # imiesłowy czynne — brzmią jak opis czynności
 RE_FOREIGN    = re.compile(r"[xvqXVQ]")  # litery obce polskiemu alfabetowi
 # Przymiotniki nazwiskowe/miejscowe — wyższy próg częstości żeby zostały tylko powszechnie znane
@@ -44,26 +44,42 @@ RE_GEO_ADJ    = re.compile(r"(owski|ewski|ański|iński|yński)$")
 
 # Rzeczowniki które wyglądają ok ale są błędami (czasowniki, zapożyczenia, nazwy geograficzne)
 NOUN_BLACKLIST = {
-    "staje",    # forma czasownika "stać/stawać", nie rzeczownik
-    "vintage",  # angielski loanword
-    "lucerna",  # głównie miasto szwajcarskie
-    "recept",   # dopełniacz lm. od "recepta" błędnie skategoryzowany jako rzeczownik męski
+    "staje",      # forma czasownika "stać/stawać", nie rzeczownik
+    "vintage",    # angielski loanword
+    "lucerna",    # głównie miasto szwajcarskie
+    "recept",     # gen.lm. od "recepta" błędnie skategoryzowany jako rzeczownik męski
+    "dakota",     # nazwa stanu USA / tkaniny — myli się z pospolitym
+    "pepsi",      # marka
+    "millennium", # loanword łaciński
+    "musli",      # loanword
+    "tera",       # prefiks jednostki / gwara (nie rzeczownik)
+    "starka",     # archaizm / gwara, mylące
+}
+
+DOP_BLACKLIST = {
+    "joga",      # mianownik "joga" (yoga) wchodzi jako dopełniacz przez błąd w PoliMorfie
 }
 
 # Zaimki i determinanty które PoliMorf taguje jako przymiotniki
 ADJ_BLACKLIST = {
+    # zaimki wskazujące
+    "ten", "ta", "to", "tamten", "tamta", "tamto",
+    "ów", "ow", "owa", "owo", "owy",
+    # zaimki dzierżawcze
+    "mój", "moja", "moje", "twój", "twoja", "twe",
+    "nasz", "nasza", "nasze", "wasz", "wasza", "wasze",
+    "swój", "swoja", "swoje",
+    # zaimki nieokreślone i pytające
     "jakikolwiek", "jakakolwiek", "jakiekolwiek",
     "którykolwiek", "którakolwiek", "którekolwiek",
     "jakiś", "jakaś", "jakieś",
     "któryś", "któraś", "któreś",
     "czyj", "czyjś",
+    # liczebniki / determinanty
     "jeden", "jedna", "jedno",
     "każdy", "każda", "każde",
     "żaden", "żadna", "żadne",
     "sam", "sama", "samo",
-    "ten", "ta", "to",
-    "tamten", "tamta", "tamto",
-    "ów", "ow", "owa", "owo", "owy",
     "inny", "inna", "inne",
     "drugi", "druga", "drugie",
     "pewien", "pewna", "pewne",
@@ -100,6 +116,7 @@ def dop_ok(word):
         and len(word) <= MAX_DOP_LEN
         and freq(word) >= MIN_FREQ_DOP
         and not RE_FOREIGN.search(word)
+        and word.lower() not in DOP_BLACKLIST
     )
 
 
