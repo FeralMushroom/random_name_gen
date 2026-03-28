@@ -67,6 +67,9 @@ NOUN_BLACKLIST = {
     "highway",    # angielski loanword
     "sherry",     # angielski loanword (napój)
     "konklawe",   # loanword łaciński, zbyt specjalistyczne
+    "cherokee",   # nazwa plemienia / marka samochodowa
+    "wellington",  # imię własne / marka butów
+    "tournee",    # loanword francuski
     # nazwy stanów USA
     "dakota", "arizona", "wirginia", "delaware", "teksas", "kolorado",
 }
@@ -90,6 +93,9 @@ DOP_BLACKLIST = {
     "konklawe",  # loanword łaciński
     "sukienka",  # mianownik zamiast dopełniacza (powinno być: sukienki)
     "paschy",    # dopełniacz od "pascha" — zbyt specjalistyczne/religijne
+    "cherokee",  # nazwa plemienia / marka
+    "tournee",   # loanword francuski
+    "ciosy",     # forma liczby mnogiej zamiast dopełniacza (powinno być: ciosu)
 }
 
 # Zaimki i determinanty które PoliMorf taguje jako przymiotniki
