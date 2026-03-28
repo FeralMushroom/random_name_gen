@@ -108,6 +108,7 @@ NOUN_BLACKLIST = {
     "timing", "tips", "tournee", "track", "trailer", "treatment", "trek",
     "trial", "trick", "trip", "troll", "truck", "trust", "underground",
     "unit", "upgrade", "vintage", "wellington", "workshop", "yang", "yard",
+    "prosperity",
 }
 
 DOP_BLACKLIST = {
