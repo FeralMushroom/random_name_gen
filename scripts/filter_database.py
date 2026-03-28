@@ -36,7 +36,16 @@ ORDINAL_BLACKLIST = {
     "pierwszy", "trzeci", "czwarty", "piąty", "szósty",
     "siódmy", "ósmy", "dziewiąty", "dziesiąty", "zerowy",
 }
-RE_ORDINAL = re.compile(r"(nasty|dziesty|setny|tysięczny|milionowy)$")
+RE_ORDINAL    = re.compile(r"(nasty|dziesty|setny|tysięczny|milionowy)$")
+# Imiesłowy przymiotnikowe czynne — brzmią jak opis czynności, nie przymiotnik
+RE_PARTICIPLE = re.compile(r"ący$")
+
+# Rzeczowniki które wyglądają ok ale są błędami (czasowniki, zapożyczenia, nazwy geograficzne)
+NOUN_BLACKLIST = {
+    "staje",    # forma czasownika "stać/stawać", nie rzeczownik
+    "vintage",  # angielski loanword
+    "lucerna",  # głównie miasto szwajcarskie
+}
 
 # Zaimki i determinanty które PoliMorf taguje jako przymiotniki
 ADJ_BLACKLIST = {
@@ -105,6 +114,8 @@ def main():
             continue
         if m in ORDINAL_BLACKLIST or RE_ORDINAL.search(m):
             continue
+        if RE_PARTICIPLE.search(m):
+            continue
         if "-" in m:
             continue
         if len(m) > MAX_ADJ_LEN:
@@ -132,6 +143,8 @@ def main():
             if "-" in w or len(w) > MAX_NOUN_LEN or freq(w) < MIN_FREQ_NOUN:
                 continue
             if w in adj_forms_set:  # substantywizowany przymiotnik
+                continue
+            if w in NOUN_BLACKLIST:
                 continue
             kept.append(w)
             total_out += 1
