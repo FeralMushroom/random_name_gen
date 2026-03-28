@@ -42,60 +42,91 @@ RE_FOREIGN    = re.compile(r"[xvqXVQ]")  # litery obce polskiemu alfabetowi
 # Przymiotniki nazwiskowe/miejscowe — wyższy próg częstości żeby zostały tylko powszechnie znane
 RE_GEO_ADJ    = re.compile(r"(owski|ewski|ański|iński|yński)$")
 
-# Rzeczowniki które wyglądają ok ale są błędami (czasowniki, zapożyczenia, nazwy geograficzne)
+# Rzeczowniki do usunięcia
 NOUN_BLACKLIST = {
-    "staje",      # forma czasownika "stać/stawać", nie rzeczownik
-    "vintage",    # angielski loanword
-    "lucerna",    # głównie miasto szwajcarskie
-    "recept",     # gen.lm. od "recepta" błędnie skategoryzowany jako rzeczownik męski
-    "pepsi",      # marka
-    "millennium", # loanword łaciński
-    "musli",      # loanword
-    "tera",       # prefiks jednostki / gwara (nie rzeczownik)
-    "starka",     # archaizm / gwara, mylące
-    "workshop",   # angielski loanword
-    "padło",      # forma czasownika "paść", nie rzeczownik
-    "drugie",     # zaimek/liczebnik, nie rzeczownik
-    "luter",      # imię własne (Marcin Luter)
-    "yang",       # filozofia wschodnia / imię własne, nie pasuje jako rzeczownik
-    "należący",   # imiesłów przymiotnikowy, nie rzeczownik
-    "ringo",      # imię własne / gra dziecięca
-    "kapo",       # loanword (włoski/obozowy)
-    "wiec",       # polityczny/archaiczny, brzmi dziwnie
-    "memorandum", # loanword łaciński
-    "football",   # angielski loanword
-    "highway",    # angielski loanword
-    "sherry",     # angielski loanword (napój)
-    "konklawe",   # loanword łaciński, zbyt specjalistyczne
-    "cherokee",   # nazwa plemienia / marka samochodowa
-    "wellington",  # imię własne / marka butów
-    "tournee",    # loanword francuski
+    # błędy PoliMorfa / archaizmy / gwara
+    "staje", "recept", "starka", "padło", "drugie", "należący", "wiec",
+    "lucerna", "tera",
+    # marki samochodowe
+    "audi", "bentley", "bugatti", "buick", "cadillac", "chrysler", "clio",
+    "daewoo", "dodge", "ferrari", "fiat", "ford", "honda", "hyundai",
+    "lamborghini", "lancia", "mazda", "mclaren", "mercedes", "mitsubishi",
+    "nissan", "opel", "peugeot", "plymouth", "pontiac", "porsche", "renault",
+    "saab", "seat", "skoda", "subaru", "suzuki", "toyota",
+    # marki tech / elektronika
+    "acer", "android", "canon", "dell", "ericsson", "intel", "kodak",
+    "motorola", "nikon", "nokia", "philips", "samsung", "siemens", "sony",
+    # inne marki i firmy
+    "adidas", "allegro", "blizzard", "empik", "jacobs", "jacuzzi", "lego",
+    "marlboro", "milka", "nike", "pepsi", "scrabble", "shell", "tabasco",
+    "trojan", "tymbark", "yale", "yamaha",
+    # zespoły / artyści
+    "abba", "beatles", "doors",
+    # imiona i nazwiska (zostawiamy: albert, abdul, donald, einstein, frankenstein, janusz, adolf, hitler)
+    "alim", "amelia", "angelika", "antek", "daniel", "danko", "darek",
+    "gabriela", "jarek", "jarka", "jasiek", "jola", "jonasz", "jung",
+    "karolek", "kowalczyk", "lucyfer", "lynch", "maciek", "majka", "maks",
+    "marcelina", "marek", "miranda", "morris", "newton", "nowak", "remington",
+    "robinson", "sabina", "sherlock", "tarzan", "wanda", "weber", "weronika",
+    "wiktor", "wiktoria", "wojtek",
+    # niebędące polskimi miastami nazwy geograficzne
+    "austin", "boston", "bristol", "brytania", "bukowina", "disneyland",
+    "granada", "hawana", "ibiza", "kabul", "kingston", "lincoln", "lucerna",
+    "malaga", "manchester", "manila", "orlean", "pekin", "toledo", "tybet",
+    "york",
     # nazwy stanów USA
     "dakota", "arizona", "wirginia", "delaware", "teksas", "kolorado",
+    # angielskie i inne obce loanwordy
+    "anthem", "background", "backup", "band", "banner", "barbecue", "bean",
+    "beat", "bias", "billboard", "blackout", "blind", "body", "boogie",
+    "boom", "boot", "business", "buster", "camera", "camp", "cargo",
+    "castor", "catch", "causa", "challenge", "challenger", "chart", "chat",
+    "cherry", "chief", "citizen", "city", "clip", "clown", "coca", "collage",
+    "college", "compact", "consulting", "continental", "copyright", "corner",
+    "counter", "country", "crack", "cricket", "cross", "crown", "cruiser",
+    "dancing", "desert", "design", "designer", "display", "draft", "drag",
+    "dual", "earl", "eastern", "engineering", "ensemble", "enter", "error",
+    "establishment", "feedback", "feeling", "field", "fighter", "firefly",
+    "flip", "flower", "focus", "football", "full", "funky", "fusion",
+    "gateway", "gentleman", "green", "guide", "happening", "hardcore",
+    "hardware", "highway", "image", "independent", "industrial", "insert",
+    "insider", "interface", "interior", "iron", "jack", "jeans", "joint",
+    "kaiser", "kapo", "keyboard", "king", "konklawe", "layout", "lead",
+    "leader", "light", "lingua", "lion", "lobby", "long", "loop", "lord",
+    "luter", "madame", "mademoiselle", "mainstream", "management", "manager",
+    "master", "meeting", "memorandum", "millennium", "mirror", "mobile",
+    "modern", "monsieur", "moon", "musli", "network", "news", "newsletter",
+    "paintball", "pedicure", "peeling", "performance", "personal", "petit",
+    "pool", "popular", "publishing", "ranger", "rangers", "real", "relief",
+    "remake", "report", "return", "reunion", "ringo", "roll", "roller",
+    "rolling", "root", "scratch", "screen", "script", "security", "september",
+    "setup", "sherry", "shift", "shire", "shop", "shopping", "sleep",
+    "sleeping", "slip", "soccer", "soft", "software", "solid", "song", "soul",
+    "soundtrack", "sous", "speech", "speed", "speedway", "spring", "sprinter",
+    "standing", "star", "stuff", "suahili", "sunny", "support", "sweet",
+    "swift", "swing", "talk", "tall", "target", "team", "teaser", "tell",
+    "timing", "tips", "tournee", "track", "trailer", "treatment", "trek",
+    "trial", "trick", "trip", "troll", "truck", "trust", "underground",
+    "unit", "upgrade", "vintage", "wellington", "workshop", "yang", "yard",
 }
 
 DOP_BLACKLIST = {
-    "joga",      # mianownik wchodzi jako dopełniacz przez błąd w PoliMorfie
-    "zorza",     # mianownik zamiast dopełniacza (powinno być: zorzy)
-    "bona",      # imię własne / łacina, nie pospolity dopełniacz
-    "delaware",  # nazwa stanu USA
-    "kolorado",  # nazwa stanu USA
-    "toni",      # imię własne
-    "yang",      # filozofia wschodnia / imię własne
-    "ringo",     # imię własne / gra dziecięca
-    "kapo",      # loanword
-    "wiecu",     # dopełniacz od "wiec"
-    "metrowej",  # forma przymiotnikowa błędnie jako dopełniacz
-    "brzydula",  # mianownik zamiast dopełniacza (powinno być: brzyduli)
-    "memorandum", # loanword łaciński
-    "aids",      # zostaje jako rzeczownik, ale nie jako dopełniacz
-    "sherry",    # loanword
-    "konklawe",  # loanword łaciński
-    "sukienka",  # mianownik zamiast dopełniacza (powinno być: sukienki)
-    "paschy",    # dopełniacz od "pascha" — zbyt specjalistyczne/religijne
-    "cherokee",  # nazwa plemienia / marka
-    "tournee",   # loanword francuski
-    "ciosy",     # forma liczby mnogiej zamiast dopełniacza (powinno być: ciosu)
+    # błędy fleksyjne PoliMorfa
+    "joga", "zorza", "brzydula", "sukienka", "ciosy", "metrowej",
+    # imiona / nazwy własne w dopełniaczu
+    "bona", "toni", "yang", "ringo", "jarka", "jola", "sabina",
+    # marki i loanwordy w dopełniaczu
+    "audi", "bugatti", "clio", "daewoo", "ferrari", "lamborghini",
+    "marlboro", "mitsubishi", "nike", "porsche", "renault", "scrabble",
+    "sony", "subaru", "suzuki", "tabasco", "yale",
+    "barbecue", "body", "boogie", "cargo", "challenge", "cherry", "city",
+    "country", "feedback", "firefly", "funky", "fusion", "image", "jacuzzi",
+    "light", "lingua", "lobby", "madame", "mademoiselle", "mobile",
+    "monsieur", "script", "security", "soul", "sous", "suahili", "sunny",
+    # pozostałe wcześniejsze wpisy
+    "delaware", "kolorado", "kapo", "wiecu", "memorandum", "aids",
+    "sherry", "konklawe", "paschy", "cherokee", "tournee",
+    "toledo",
 }
 
 # Zaimki i determinanty które PoliMorf taguje jako przymiotniki
@@ -225,6 +256,18 @@ def main():
     print(f"  {total_in:,} -> {total_out:,}  (usunieto {total_in-total_out:,})")
     for g, words in nouns_ok.items():
         print(f"    {g}: {len(words):,}")
+
+    # Słowa których nie ma w PoliMorfie — dodajemy ręcznie po filtrowaniu
+    NOUN_ADDITIONS = {
+        "m": ["janusz", "adolf", "hitler"],
+        "f": ["europa", "azja", "ameryka", "australia"],
+    }
+    for gender, words in NOUN_ADDITIONS.items():
+        existing = set(nouns_ok.get(gender, []))
+        added = [w for w in words if w not in existing]
+        nouns_ok.setdefault(gender, []).extend(added)
+        if added:
+            print(f"  Dodano do {gender}: {added}")
     save("noun_lemmas.json", nouns_ok)
 
     print("Filtruje dopelniacze...")
