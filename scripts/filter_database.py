@@ -64,6 +64,9 @@ NOUN_BLACKLIST = {
     "wiec",       # polityczny/archaiczny, brzmi dziwnie
     "memorandum", # loanword łaciński
     "football",   # angielski loanword
+    "highway",    # angielski loanword
+    "sherry",     # angielski loanword (napój)
+    "konklawe",   # loanword łaciński, zbyt specjalistyczne
     # nazwy stanów USA
     "dakota", "arizona", "wirginia", "delaware", "teksas", "kolorado",
 }
@@ -83,6 +86,10 @@ DOP_BLACKLIST = {
     "brzydula",  # mianownik zamiast dopełniacza (powinno być: brzyduli)
     "memorandum", # loanword łaciński
     "aids",      # zostaje jako rzeczownik, ale nie jako dopełniacz
+    "sherry",    # loanword
+    "konklawe",  # loanword łaciński
+    "sukienka",  # mianownik zamiast dopełniacza (powinno być: sukienki)
+    "paschy",    # dopełniacz od "pascha" — zbyt specjalistyczne/religijne
 }
 
 # Zaimki i determinanty które PoliMorf taguje jako przymiotniki
