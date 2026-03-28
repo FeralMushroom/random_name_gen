@@ -1,4 +1,5 @@
 PoliMorf.tab.gz
+.claude/
 *.env
 data/backup/
 data/bot_state.json
