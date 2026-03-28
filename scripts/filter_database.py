@@ -28,8 +28,8 @@ MAX_DOP_LEN  = 18
 
 MIN_FREQ_ADJ  = 2e-7
 MIN_FREQ_NOUN = 5e-7
-# Formy fleksyjne mają niższe freq niż lematy — próg celowo niski
-MIN_FREQ_DOP  = 1e-7
+# Formy fleksyjne mają niższe freq niż lematy — próg niższy niż dla rzeczowników
+MIN_FREQ_DOP  = 4e-7
 
 # Nieregularne liczebniki porządkowe (regularne łapie RE_ORDINAL)
 ORDINAL_BLACKLIST = {
@@ -37,14 +37,17 @@ ORDINAL_BLACKLIST = {
     "siódmy", "ósmy", "dziewiąty", "dziesiąty", "zerowy",
 }
 RE_ORDINAL    = re.compile(r"(nasty|dziesty|setny|tysięczny|milionowy)$")
-# Imiesłowy przymiotnikowe czynne — brzmią jak opis czynności, nie przymiotnik
-RE_PARTICIPLE = re.compile(r"ący$")
+RE_PARTICIPLE = re.compile(r"ący$")  # imiesłowy czynne — brzmią jak opis czynności
+RE_FOREIGN    = re.compile(r"[xvqXVQ]")  # litery obce polskiemu alfabetowi
+# Przymiotniki nazwiskowe/miejscowe — wyższy próg częstości żeby zostały tylko powszechnie znane
+RE_GEO_ADJ    = re.compile(r"(owski|ewski|ański|iński|yński)$")
 
 # Rzeczowniki które wyglądają ok ale są błędami (czasowniki, zapożyczenia, nazwy geograficzne)
 NOUN_BLACKLIST = {
     "staje",    # forma czasownika "stać/stawać", nie rzeczownik
     "vintage",  # angielski loanword
     "lucerna",  # głównie miasto szwajcarskie
+    "recept",   # dopełniacz lm. od "recepta" błędnie skategoryzowany jako rzeczownik męski
 }
 
 # Zaimki i determinanty które PoliMorf taguje jako przymiotniki
@@ -92,7 +95,12 @@ def freq(word):
 
 
 def dop_ok(word):
-    return "-" not in word and len(word) <= MAX_DOP_LEN and freq(word) >= MIN_FREQ_DOP
+    return (
+        "-" not in word
+        and len(word) <= MAX_DOP_LEN
+        and freq(word) >= MIN_FREQ_DOP
+        and not RE_FOREIGN.search(word)
+    )
 
 
 def main():
@@ -115,6 +123,11 @@ def main():
         if m in ORDINAL_BLACKLIST or RE_ORDINAL.search(m):
             continue
         if RE_PARTICIPLE.search(m):
+            continue
+        if RE_FOREIGN.search(m):
+            continue
+        # Nazwiskowe/miejscowe -owski itd. — zostają tylko jeśli są naprawdę pospolite
+        if RE_GEO_ADJ.search(m) and freq(m) < 1e-5:
             continue
         if "-" in m:
             continue
@@ -141,6 +154,8 @@ def main():
         for w in words:
             total_in += 1
             if "-" in w or len(w) > MAX_NOUN_LEN or freq(w) < MIN_FREQ_NOUN:
+                continue
+            if RE_FOREIGN.search(w):
                 continue
             if w in adj_forms_set:  # substantywizowany przymiotnik
                 continue
